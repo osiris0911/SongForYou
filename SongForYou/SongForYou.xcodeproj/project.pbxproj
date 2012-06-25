@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		847B5ECB1598D69F005CFF0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5ECA1598D69F005CFF0E /* UIKit.framework */; };
+		847B5ECD1598D69F005CFF0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5ECC1598D69F005CFF0E /* Foundation.framework */; };
+		847B5ECF1598D69F005CFF0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5ECE1598D69F005CFF0E /* CoreGraphics.framework */; };
+		847B5ED51598D69F005CFF0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 847B5ED31598D69F005CFF0E /* InfoPlist.strings */; };
+		847B5ED71598D69F005CFF0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5ED61598D69F005CFF0E /* main.m */; };
+		847B5EDB1598D6A0005CFF0E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5EDA1598D6A0005CFF0E /* AppDelegate.m */; };
+		847B5EDE1598D6A0005CFF0E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B5EDC1598D6A0005CFF0E /* MainStoryboard_iPhone.storyboard */; };
+		847B5EE11598D6A0005CFF0E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847B5EDF1598D6A0005CFF0E /* MainStoryboard_iPad.storyboard */; };
+		847B5EE41598D6A0005CFF0E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5EE31598D6A0005CFF0E /* ViewController.m */; };
+		847B5EEC1598D6A0005CFF0E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5EEB1598D6A0005CFF0E /* SenTestingKit.framework */; };
+		847B5EED1598D6A0005CFF0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5ECA1598D69F005CFF0E /* UIKit.framework */; };
+		847B5EEE1598D6A0005CFF0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5ECC1598D69F005CFF0E /* Foundation.framework */; };
+		847B5EF61598D6A0005CFF0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 847B5EF41598D6A0005CFF0E /* InfoPlist.strings */; };
+		847B5EF91598D6A0005CFF0E /* SongForYouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5EF81598D6A0005CFF0E /* SongForYouTests.m */; };
+		847B5F0F1598DD57005CFF0E /* AudioFileStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5F041598DD57005CFF0E /* AudioFileStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		847B5F101598DD57005CFF0E /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5F061598DD57005CFF0E /* AudioPlayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		847B5F111598DD57005CFF0E /* AudioPlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5F081598DD57005CFF0E /* AudioPlayerAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		847B5F121598DD57005CFF0E /* AudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5F0A1598DD57005CFF0E /* AudioPlayerUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		847B5F131598DD57005CFF0E /* AudioQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5F0C1598DD57005CFF0E /* AudioQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		847B5F141598DD57005CFF0E /* AudioRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5F0E1598DD57005CFF0E /* AudioRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		847B5F6D1598E0C9005CFF0E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847B5F6C1598E0C9005CFF0E /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		847B5EEF1598D6A0005CFF0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847B5EBD1598D69F005CFF0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847B5EC51598D69F005CFF0E;
+			remoteInfo = SongForYou;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		847B5EC61598D69F005CFF0E /* SongForYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SongForYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847B5ECA1598D69F005CFF0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		847B5ECC1598D69F005CFF0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		847B5ECE1598D69F005CFF0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		847B5ED21598D69F005CFF0E /* SongForYou-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SongForYou-Info.plist"; sourceTree = "<group>"; };
+		847B5ED41598D69F005CFF0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		847B5ED61598D69F005CFF0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		847B5ED81598D69F005CFF0E /* SongForYou-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SongForYou-Prefix.pch"; sourceTree = "<group>"; };
+		847B5ED91598D6A0005CFF0E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		847B5EDA1598D6A0005CFF0E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		847B5EDD1598D6A0005CFF0E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		847B5EE01598D6A0005CFF0E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		847B5EE21598D6A0005CFF0E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		847B5EE31598D6A0005CFF0E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		847B5EEA1598D6A0005CFF0E /* SongForYouTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SongForYouTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847B5EEB1598D6A0005CFF0E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		847B5EF31598D6A0005CFF0E /* SongForYouTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SongForYouTests-Info.plist"; sourceTree = "<group>"; };
+		847B5EF51598D6A0005CFF0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		847B5EF71598D6A0005CFF0E /* SongForYouTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongForYouTests.h; sourceTree = "<group>"; };
+		847B5EF81598D6A0005CFF0E /* SongForYouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongForYouTests.m; sourceTree = "<group>"; };
+		847B5F031598DD57005CFF0E /* AudioFileStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileStream.h; sourceTree = "<group>"; };
+		847B5F041598DD57005CFF0E /* AudioFileStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileStream.m; sourceTree = "<group>"; };
+		847B5F051598DD57005CFF0E /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		847B5F061598DD57005CFF0E /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		847B5F071598DD57005CFF0E /* AudioPlayerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerAppDelegate.h; sourceTree = "<group>"; };
+		847B5F081598DD57005CFF0E /* AudioPlayerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerAppDelegate.m; sourceTree = "<group>"; };
+		847B5F091598DD57005CFF0E /* AudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerUtil.h; sourceTree = "<group>"; };
+		847B5F0A1598DD57005CFF0E /* AudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerUtil.m; sourceTree = "<group>"; };
+		847B5F0B1598DD57005CFF0E /* AudioQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioQueue.h; sourceTree = "<group>"; };
+		847B5F0C1598DD57005CFF0E /* AudioQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioQueue.m; sourceTree = "<group>"; };
+		847B5F0D1598DD57005CFF0E /* AudioRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioRequest.h; sourceTree = "<group>"; };
+		847B5F0E1598DD57005CFF0E /* AudioRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioRequest.m; sourceTree = "<group>"; };
+		847B5F6C1598E0C9005CFF0E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847B5EC31598D69F005CFF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847B5F6D1598E0C9005CFF0E /* AudioToolbox.framework in Frameworks */,
+				847B5ECB1598D69F005CFF0E /* UIKit.framework in Frameworks */,
+				847B5ECD1598D69F005CFF0E /* Foundation.framework in Frameworks */,
+				847B5ECF1598D69F005CFF0E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847B5EE61598D6A0005CFF0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847B5EEC1598D6A0005CFF0E /* SenTestingKit.framework in Frameworks */,
+				847B5EED1598D6A0005CFF0E /* UIKit.framework in Frameworks */,
+				847B5EEE1598D6A0005CFF0E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		847B5EBB1598D69F005CFF0E = {
+			isa = PBXGroup;
+			children = (
+				847B5F6C1598E0C9005CFF0E /* AudioToolbox.framework */,
+				847B5ED01598D69F005CFF0E /* SongForYou */,
+				847B5EF11598D6A0005CFF0E /* SongForYouTests */,
+				847B5EC91598D69F005CFF0E /* Frameworks */,
+				847B5EC71598D69F005CFF0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		847B5EC71598D69F005CFF0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847B5EC61598D69F005CFF0E /* SongForYou.app */,
+				847B5EEA1598D6A0005CFF0E /* SongForYouTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847B5EC91598D69F005CFF0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				847B5ECA1598D69F005CFF0E /* UIKit.framework */,
+				847B5ECC1598D69F005CFF0E /* Foundation.framework */,
+				847B5ECE1598D69F005CFF0E /* CoreGraphics.framework */,
+				847B5EEB1598D6A0005CFF0E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		847B5ED01598D69F005CFF0E /* SongForYou */ = {
+			isa = PBXGroup;
+			children = (
+				847B5ED91598D6A0005CFF0E /* AppDelegate.h */,
+				847B5EDA1598D6A0005CFF0E /* AppDelegate.m */,
+				847B5EDC1598D6A0005CFF0E /* MainStoryboard_iPhone.storyboard */,
+				847B5EDF1598D6A0005CFF0E /* MainStoryboard_iPad.storyboard */,
+				847B5EE21598D6A0005CFF0E /* ViewController.h */,
+				847B5EE31598D6A0005CFF0E /* ViewController.m */,
+				847B5F021598DD19005CFF0E /* AudioPlayer */,
+				847B5ED11598D69F005CFF0E /* Supporting Files */,
+			);
+			path = SongForYou;
+			sourceTree = "<group>";
+		};
+		847B5ED11598D69F005CFF0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				847B5ED21598D69F005CFF0E /* SongForYou-Info.plist */,
+				847B5ED31598D69F005CFF0E /* InfoPlist.strings */,
+				847B5ED61598D69F005CFF0E /* main.m */,
+				847B5ED81598D69F005CFF0E /* SongForYou-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		847B5EF11598D6A0005CFF0E /* SongForYouTests */ = {
+			isa = PBXGroup;
+			children = (
+				847B5EF71598D6A0005CFF0E /* SongForYouTests.h */,
+				847B5EF81598D6A0005CFF0E /* SongForYouTests.m */,
+				847B5EF21598D6A0005CFF0E /* Supporting Files */,
+			);
+			path = SongForYouTests;
+			sourceTree = "<group>";
+		};
+		847B5EF21598D6A0005CFF0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				847B5EF31598D6A0005CFF0E /* SongForYouTests-Info.plist */,
+				847B5EF41598D6A0005CFF0E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		847B5F021598DD19005CFF0E /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				847B5F031598DD57005CFF0E /* AudioFileStream.h */,
+				847B5F041598DD57005CFF0E /* AudioFileStream.m */,
+				847B5F051598DD57005CFF0E /* AudioPlayer.h */,
+				847B5F061598DD57005CFF0E /* AudioPlayer.m */,
+				847B5F071598DD57005CFF0E /* AudioPlayerAppDelegate.h */,
+				847B5F081598DD57005CFF0E /* AudioPlayerAppDelegate.m */,
+				847B5F091598DD57005CFF0E /* AudioPlayerUtil.h */,
+				847B5F0A1598DD57005CFF0E /* AudioPlayerUtil.m */,
+				847B5F0B1598DD57005CFF0E /* AudioQueue.h */,
+				847B5F0C1598DD57005CFF0E /* AudioQueue.m */,
+				847B5F0D1598DD57005CFF0E /* AudioRequest.h */,
+				847B5F0E1598DD57005CFF0E /* AudioRequest.m */,
+			);
+			name = AudioPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847B5EC51598D69F005CFF0E /* SongForYou */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847B5EFC1598D6A0005CFF0E /* Build configuration list for PBXNativeTarget "SongForYou" */;
+			buildPhases = (
+				847B5EC21598D69F005CFF0E /* Sources */,
+				847B5EC31598D69F005CFF0E /* Frameworks */,
+				847B5EC41598D69F005CFF0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SongForYou;
+			productName = SongForYou;
+			productReference = 847B5EC61598D69F005CFF0E /* SongForYou.app */;
+			productType = "com.apple.product-type.application";
+		};
+		847B5EE91598D6A0005CFF0E /* SongForYouTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847B5EFF1598D6A0005CFF0E /* Build configuration list for PBXNativeTarget "SongForYouTests" */;
+			buildPhases = (
+				847B5EE51598D6A0005CFF0E /* Sources */,
+				847B5EE61598D6A0005CFF0E /* Frameworks */,
+				847B5EE71598D6A0005CFF0E /* Resources */,
+				847B5EE81598D6A0005CFF0E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847B5EF01598D6A0005CFF0E /* PBXTargetDependency */,
+			);
+			name = SongForYouTests;
+			productName = SongForYouTests;
+			productReference = 847B5EEA1598D6A0005CFF0E /* SongForYouTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847B5EBD1598D69F005CFF0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 847B5EC01598D69F005CFF0E /* Build configuration list for PBXProject "SongForYou" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 847B5EBB1598D69F005CFF0E;
+			productRefGroup = 847B5EC71598D69F005CFF0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847B5EC51598D69F005CFF0E /* SongForYou */,
+				847B5EE91598D6A0005CFF0E /* SongForYouTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847B5EC41598D69F005CFF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847B5ED51598D69F005CFF0E /* InfoPlist.strings in Resources */,
+				847B5EDE1598D6A0005CFF0E /* MainStoryboard_iPhone.storyboard in Resources */,
+				847B5EE11598D6A0005CFF0E /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847B5EE71598D6A0005CFF0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847B5EF61598D6A0005CFF0E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		847B5EE81598D6A0005CFF0E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847B5EC21598D69F005CFF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847B5ED71598D69F005CFF0E /* main.m in Sources */,
+				847B5EDB1598D6A0005CFF0E /* AppDelegate.m in Sources */,
+				847B5EE41598D6A0005CFF0E /* ViewController.m in Sources */,
+				847B5F0F1598DD57005CFF0E /* AudioFileStream.m in Sources */,
+				847B5F101598DD57005CFF0E /* AudioPlayer.m in Sources */,
+				847B5F111598DD57005CFF0E /* AudioPlayerAppDelegate.m in Sources */,
+				847B5F121598DD57005CFF0E /* AudioPlayerUtil.m in Sources */,
+				847B5F131598DD57005CFF0E /* AudioQueue.m in Sources */,
+				847B5F141598DD57005CFF0E /* AudioRequest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847B5EE51598D6A0005CFF0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847B5EF91598D6A0005CFF0E /* SongForYouTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		847B5EF01598D6A0005CFF0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847B5EC51598D69F005CFF0E /* SongForYou */;
+			targetProxy = 847B5EEF1598D6A0005CFF0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		847B5ED31598D69F005CFF0E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847B5ED41598D69F005CFF0E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		847B5EDC1598D6A0005CFF0E /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847B5EDD1598D6A0005CFF0E /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		847B5EDF1598D6A0005CFF0E /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847B5EE01598D6A0005CFF0E /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		847B5EF41598D6A0005CFF0E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847B5EF51598D6A0005CFF0E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847B5EFA1598D6A0005CFF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		847B5EFB1598D6A0005CFF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		847B5EFD1598D6A0005CFF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SongForYou/SongForYou-Prefix.pch";
+				INFOPLIST_FILE = "SongForYou/SongForYou-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		847B5EFE1598D6A0005CFF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SongForYou/SongForYou-Prefix.pch";
+				INFOPLIST_FILE = "SongForYou/SongForYou-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		847B5F001598D6A0005CFF0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SongForYou.app/SongForYou";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SongForYou/SongForYou-Prefix.pch";
+				INFOPLIST_FILE = "SongForYouTests/SongForYouTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		847B5F011598D6A0005CFF0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SongForYou.app/SongForYou";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SongForYou/SongForYou-Prefix.pch";
+				INFOPLIST_FILE = "SongForYouTests/SongForYouTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847B5EC01598D69F005CFF0E /* Build configuration list for PBXProject "SongForYou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847B5EFA1598D6A0005CFF0E /* Debug */,
+				847B5EFB1598D6A0005CFF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847B5EFC1598D6A0005CFF0E /* Build configuration list for PBXNativeTarget "SongForYou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847B5EFD1598D6A0005CFF0E /* Debug */,
+				847B5EFE1598D6A0005CFF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		847B5EFF1598D6A0005CFF0E /* Build configuration list for PBXNativeTarget "SongForYouTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847B5F001598D6A0005CFF0E /* Debug */,
+				847B5F011598D6A0005CFF0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 847B5EBD1598D69F005CFF0E /* Project object */;
+}
