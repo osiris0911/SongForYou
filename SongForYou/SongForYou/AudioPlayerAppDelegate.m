@@ -6,7 +6,7 @@
 
 @implementation AudioPlayerAppDelegate
 
-//@synthesize window;
+@synthesize window;
 
 void interruptionListener (void *inClientData, UInt32 inInterruptionState);
 
@@ -75,6 +75,10 @@ void interruptionListener (void *inClientData, UInt32 inInterruptionState);
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	return YES;
+}
+
+- (void)playSong{
+    NSLog(@"playSong");
 }
 
 - (IBAction)load {

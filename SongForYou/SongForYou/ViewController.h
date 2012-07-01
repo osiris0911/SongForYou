@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AudioPlayerAppDelegate.h"
 
 @interface ViewController : UIViewController
+
+-(IBAction)playButton:(id)sender;
 
 @end

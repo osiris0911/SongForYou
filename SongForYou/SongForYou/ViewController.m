@@ -26,6 +26,12 @@
     // Release any retained subviews of the main view.
 }
 
+- (IBAction)playButton:(id)sender{
+    
+
+    
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
