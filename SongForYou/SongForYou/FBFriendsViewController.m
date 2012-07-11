@@ -231,7 +231,7 @@ static NSString* facebookAppId = @"146412965489498";
             NSLog(@"kAPIGraphMe");
             NSString *nameID = [[NSString alloc] initWithFormat:@"%@ (%@)", [result objectForKey:@"name"], [result objectForKey:@"id"]];
             myFacebookID = [result objectForKey:@"id"];
-            NSLog(@"myFacebookIDL%@",myFacebookID);
+            NSLog(@"myFacebookID:%@",myFacebookID);
             
             NSMutableArray *userData = [[NSMutableArray alloc] initWithObjects:
                                         [NSDictionary dictionaryWithObjectsAndKeys:
@@ -493,6 +493,23 @@ static NSString* facebookAppId = @"146412965489498";
         
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ 
+    NSLog(@"prepareForSegue");
+    //check the identifier if there are multiple segue connection
+    //make sure the correct spelling of identifier
+    
+    if ([segue.identifier isEqualToString:@"ChooseSongs"] ) {
+        
+        // go to next page
+        SongsViewController *songsVController = [segue destinationViewController];
+        [songsVController setCurrFBImage:FBImage];
+        [songsVController setCurrFBId:FBId];
+        [songsVController setCurrFBName:FBName];
+        
+    }
+    
+}
+
 
 #pragma mark - UITableView Datasource and Delegate Methods
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -572,7 +589,7 @@ static NSString* facebookAppId = @"146412965489498";
     fbfriend.friendID = objectID;
     fbfriend.friendImage = [self imageForObject:[[myData objectAtIndex:indexPath.row] objectForKey:@"id"]];
     fbfriend.friendName = [[myData objectAtIndex:indexPath.row] objectForKey:@"name"];
-    fbfriend.imageURLString = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture",objectID];
+    fbfriend.friendImageUrl = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture",objectID];
                             
     if( !fbfriend.friendImage){
         //if (tableView.dragging == NO && tableView.decelerating == NO)
@@ -598,12 +615,19 @@ static NSString* facebookAppId = @"146412965489498";
     NSLog(@"indexPath:%@", indexPath);
     if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
         [selectedFBID removeObjectForKey:cell.textLabel.text];
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        //cell.accessoryType = UITableViewCellAccessoryNone;
     } else {
         NSLog(@"CheckMark:%@",cell.tag);
         [selectedFBID setObject:(NSString*)cell.tag forKey:cell.textLabel.text];
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }
+        //cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
+        FBImage = cell.imageView.image;
+        FBId = (NSString*)cell.tag;
+        FBName = cell.textLabel.text;
+        
+        [self performSegueWithIdentifier:@"ChooseSongs" sender:self];
+         
+}
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

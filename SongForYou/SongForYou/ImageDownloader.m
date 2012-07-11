@@ -86,7 +86,7 @@
     // alloc+init and start an NSURLConnection; release on completion/failure
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:
                              [NSURLRequest requestWithURL:
-                              [NSURL URLWithString:fbfriend.imageURLString]] delegate:self];
+                              [NSURL URLWithString:fbfriend.friendImageUrl]] delegate:self];
     self.imageConnection = conn;
     [conn release];
 

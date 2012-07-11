@@ -11,6 +11,7 @@
 #import "Facebook.h"
 #import "FBConnect.h"
 #import "ImageDownloader.h"
+#import "SongsViewController.h"
 //#import "SpotsQuery.h"
 
 typedef enum apiCall {
@@ -73,6 +74,10 @@ ImageDownloaderDelegate>{
     IBOutlet UITextField *tripNameTextField;
     
     NSString* myFacebookID;
+    
+    UIImage *FBImage;
+    NSString *FBId;
+    NSString *FBName;
     
 }
 

@@ -7,7 +7,7 @@
 @synthesize friendID;
 @synthesize friendName;
 @synthesize friendImage;
-@synthesize imageURLString;
+@synthesize friendImageUrl;
 
 
 @end

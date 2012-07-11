@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "IndexViewController.h"
 
 @interface ViewController ()
 

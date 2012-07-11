@@ -6,35 +6,20 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Index View Controller - SongForYou-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="IndexViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mn2-9g-rYy">
-                                <rect key="frame" x="124" y="305" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="playButton:" destination="2" eventType="touchUpInside" id="uf4-fb-gXi"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3oi-F1-gvI">
-                                <rect key="frame" x="109" y="359" width="103" height="37"/>
+                                <rect key="frame" x="31" y="359" width="258" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="FB Friends">
+                                <state key="normal" title="Choose your friends">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -45,15 +30,84 @@
                                     <segue destination="6qk-Mb-WOO" kind="push" id="chD-ml-0P7"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="5Rd-fw-TZG">
+                                <rect key="frame" x="0.0" y="20" width="320" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">記得當你出國的前夕，
+我們在KTV為你餞別，
+我們唱了 "Waiting for you",  "朋友" 還有不太會唱的 "笑忘書"。
+自此之後，我幾乎沒再唱過  "Waiting for you"，
+因為這首歌已具有了意義，是對你出國的紀念，
+送給你這首歌...
+
+希望能讓你想起在台灣等你回來團圓的好友們！</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="25e-Oh-Crb">
+                                <rect key="frame" x="0.0" y="299" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">我的故事是否讓你也想起了過去的回憶呢？
+馬上送一首懷念的歌曲給你的好朋友吧～</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JNj-6G-x26"/>
+                    <navigationItem key="navigationItem" title="SongForYou" id="JNj-6G-x26">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="iYw-5y-wYb">
+                            <connections>
+                                <segue destination="5dI-fS-Pa7" kind="modal" modalTransitionStyle="flipHorizontal" id="PVU-Zl-Ube"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="602" y="22"/>
+            <point key="canvasLocation" x="2500" y="22"/>
         </scene>
-        <!--Friends View Controller - FB Friends-->
+        <!--History View Controller - History-->
+        <scene sceneID="X6J-oL-Gyn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ7-jI-1Qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="qaS-qB-FO0" customClass="HistoryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVq-SD-HZH">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="SzN-Yx-2tT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" id="ViP-Yy-Ecr">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="ybS-he-jAv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="rNw-XV-yiV">
+                            <connections>
+                                <segue destination="ZBI-Dc-C95" kind="modal" modalTransitionStyle="flipHorizontal" id="Chb-Y8-9da"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2500" y="656"/>
+        </scene>
+        <!--Friends View Controller - Friends-->
         <scene sceneID="Mgq-5a-H29">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tyg-2H-bOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,15 +117,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LZe-eW-VaH">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="FriendsCell" id="2lT-hR-HGG">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FriendsCell" id="2lT-hR-HGG">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -82,16 +136,192 @@
                                     <outlet property="delegate" destination="6qk-Mb-WOO" id="idm-5z-gr8"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" id="wFn-LQ-pIE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FB Friends" id="xGU-7T-mpe"/>
+                    <navigationItem key="navigationItem" title="Friends" id="xGU-7T-mpe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="QAF-zX-fqz"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="FriendsTableView" destination="LZe-eW-VaH" id="iYm-fJ-k5q"/>
+                        <segue destination="hp3-G2-Oqx" kind="push" identifier="ChooseSongs" id="Rak-Z9-JHl"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1013" y="22"/>
+            <point key="canvasLocation" x="2911" y="22"/>
+        </scene>
+        <!--Songs View Controller - Songs-->
+        <scene sceneID="uSe-R3-7iC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbL-bb-P3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="hp3-G2-Oqx" customClass="SongsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cYI-HX-39V">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WEg-k5-hJd">
+                                <rect key="frame" x="0.0" y="114" width="320" height="302"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="SongsCell" id="4tD-mu-i7w">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hp3-G2-Oqx" id="H6D-Zl-M2L"/>
+                                    <outlet property="delegate" destination="hp3-G2-Oqx" id="YHv-fs-gdJ"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" id="7IA-zc-bye">
+                                <rect key="frame" x="0.0" y="70" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Songs</string>
+                                    <string>Artists</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="hp3-G2-Oqx" id="ZZi-LX-1zc"/>
+                                </connections>
+                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="fJJ-GQ-C4W">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Fhd-m1-0uy">
+                                <rect key="frame" x="68" y="24" width="232" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Songs" id="fYS-Ny-oDK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="3Lx-I3-dFE"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="SongsTableView" destination="WEg-k5-hJd" id="w48-C6-WAh"/>
+                        <outlet property="friendImageView" destination="fJJ-GQ-C4W" id="ELF-Bm-86C"/>
+                        <outlet property="friendLabel" destination="Fhd-m1-0uy" id="gJY-d7-1Wi"/>
+                        <outlet property="searchDisplayController" destination="XQT-Zm-eUU" id="C3U-V3-DmX"/>
+                        <segue destination="dWK-Rs-7P2" kind="push" identifier="SetComments" id="Zdp-Ph-g2l"/>
+                    </connections>
+                </viewController>
+                <searchDisplayController id="XQT-Zm-eUU">
+                    <connections>
+                        <outlet property="delegate" destination="hp3-G2-Oqx" id="Gya-uu-rSZ"/>
+                        <outlet property="searchBar" destination="7IA-zc-bye" id="FTw-11-ONo"/>
+                        <outlet property="searchContentsController" destination="hp3-G2-Oqx" id="p3g-FX-Wmv"/>
+                        <outlet property="searchResultsDataSource" destination="hp3-G2-Oqx" id="vhc-oO-450"/>
+                        <outlet property="searchResultsDelegate" destination="hp3-G2-Oqx" id="hSW-uo-5cK"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="3361" y="22"/>
+        </scene>
+        <!--Comments View Controller - Write Something-->
+        <scene sceneID="sCD-F4-fLn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3W-hx-aDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="dWK-Rs-7P2" customClass="CommentsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yRa-x1-7Jb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="txg-uJ-4yV">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="t10-SZ-EJ3">
+                                <rect key="frame" x="68" y="24" width="142" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Song" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="UJZ-6f-pRu">
+                                <rect key="frame" x="68" y="84" width="126" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="想對你說...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="9xH-7m-aCE">
+                                <rect key="frame" x="20" y="128" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="標籤：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Cdx-p1-kUi">
+                                <rect key="frame" x="20" y="222" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="WcX-Oj-jnJ">
+                                <rect key="frame" x="20" y="157" width="280" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dWK-Rs-7P2" id="csp-wn-gJG"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="gEe-Rb-9Cx">
+                                <rect key="frame" x="10" y="70" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="T5h-NX-5gB" customClass="TagScrollView">
+                                <rect key="frame" x="0.0" y="346" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="VfF-QU-uuH">
+                                <rect key="frame" x="42" y="251" width="258" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Write Something" id="Dog-Ib-Yim">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="YA6-3d-eQa">
+                            <connections>
+                                <segue destination="5dI-fS-Pa7" kind="modal" modalTransitionStyle="flipHorizontal" id="2ad-wV-MEc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumImageView" destination="gEe-Rb-9Cx" id="LPt-lQ-vD0"/>
+                        <outlet property="commentsTextField" destination="WcX-Oj-jnJ" id="tZL-os-Vp7"/>
+                        <outlet property="friendImageView" destination="txg-uJ-4yV" id="3D8-WM-uMW"/>
+                        <outlet property="friendLabel" destination="t10-SZ-EJ3" id="kcf-CC-OCc"/>
+                        <outlet property="songLabel" destination="UJZ-6f-pRu" id="lzk-pg-Suv"/>
+                        <outlet property="tagLabel" destination="VfF-QU-uuH" id="kLr-xH-fPH"/>
+                        <outlet property="tagList" destination="T5h-NX-5gB" id="qla-3I-K89"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3803" y="22"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Crp-IG-Hcf">
@@ -115,7 +345,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginFB:" destination="LKx-nk-7FK" eventType="touchUpInside" id="FP4-NT-yF5"/>
-                                    <segue destination="yhE-VJ-Iz1" kind="modal" id="9Ae-F3-iXx"/>
+                                    <segue destination="ZBI-Dc-C95" kind="modal" modalTransitionStyle="crossDissolve" id="Rwx-5T-vye"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,58 +356,57 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-301" y="22"/>
+            <point key="canvasLocation" x="1471" y="22"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="oPJ-hP-SGv">
+        <scene sceneID="jQn-xi-yba">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZtM-Ku-rwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController storyboardIdentifier="NavController" id="yhE-VJ-Iz1" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjz-aO-zlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="NavController" id="ZBI-Dc-C95" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="SmT-Fl-QlA">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BUR-zP-dRD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="hMJ-22-Jfn"/>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="ReD-hz-OHH"/>
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="138" y="22"/>
+            <point key="canvasLocation" x="1974" y="22"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Mc-E2-Xan">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="djM-ln-YEV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="5dI-fS-Pa7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cy1-YD-0Wf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qaS-qB-FO0" kind="relationship" relationship="rootViewController" id="P12-Ap-OV5"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1974" y="656"/>
         </scene>
     </scenes>
     <resources>
         <image name="loading_fb_button(78,294).png" width="164" height="33"/>
     </resources>
-    <classes>
-        <class className="FBFriendsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBFriendsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendFBID:"/>
-                <relationship kind="outlet" name="FriendsTableView" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="HelloBt" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="tripNameTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginFB:"/>
-                <relationship kind="outlet" name="fbButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="playButton:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rwx-5T-vye"/>
+        <segue reference="2ad-wV-MEc"/>
+    </inferredMetricsTieBreakers>
 </document>

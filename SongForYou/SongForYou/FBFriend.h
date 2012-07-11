@@ -12,7 +12,7 @@
 @property (nonatomic, retain) NSString *friendID;
 @property (nonatomic, retain) NSString *friendName;
 @property (nonatomic, retain) UIImage *friendImage;
-@property (nonatomic, retain) NSString *imageURLString;
+@property (nonatomic, retain) NSString *friendImageUrl;
 
 
 @end
