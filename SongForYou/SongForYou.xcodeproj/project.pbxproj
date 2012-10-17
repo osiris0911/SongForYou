@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84176EF215B1D71F0069A8E9 /* album1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84176EED15B1D71F0069A8E9 /* album1.jpg */; };
+		84176EF315B1D71F0069A8E9 /* album2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84176EEE15B1D71F0069A8E9 /* album2.jpg */; };
+		84176EF415B1D71F0069A8E9 /* album3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84176EEF15B1D71F0069A8E9 /* album3.jpg */; };
+		84176EF515B1D71F0069A8E9 /* album4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84176EF015B1D71F0069A8E9 /* album4.jpg */; };
+		84176EF615B1D71F0069A8E9 /* album5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84176EF115B1D71F0069A8E9 /* album5.jpg */; };
+		841ACECE15B9C0BC00252B3E /* HistoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841ACECD15B9C0BC00252B3E /* HistoryDetailViewController.m */; };
 		844BB49815A0C1A3000F75E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BB49715A0C1A3000F75E9 /* LoginViewController.m */; };
 		844BB49B15A0C1B2000F75E9 /* loading_fb_button(78,294).png in Resources */ = {isa = PBXBuildFile; fileRef = 844BB49A15A0C1B2000F75E9 /* loading_fb_button(78,294).png */; };
 		844F410E15A6E79100B41480 /* CommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F410D15A6E79100B41480 /* CommentsViewController.m */; };
@@ -36,17 +42,13 @@
 		847B5FB41598EF1F005CFF0E /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 847B5FB31598EF1F005CFF0E /* Placeholder.png */; };
 		847B5FBB15999E34005CFF0E /* FBFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5FB815999E34005CFF0E /* FBFriend.m */; };
 		847B5FBC15999E34005CFF0E /* FBFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B5FBA15999E34005CFF0E /* FBFriendsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		84879C8015B2AA180087B84B /* SongForYou.m in Sources */ = {isa = PBXBuildFile; fileRef = 84879C7F15B2AA180087B84B /* SongForYou.m */; };
 		8494981815AAF2DA00B2D252 /* TagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494981715AAF2DA00B2D252 /* TagButton.m */; };
 		8494981B15AAF2FF00B2D252 /* TagScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494981A15AAF2FF00B2D252 /* TagScrollView.m */; };
 		8494981E15AAF31700B2D252 /* TagAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8494981D15AAF31700B2D252 /* TagAdder.m */; };
-		8498274B15A5DBF30036C0AD /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498274A15A5DBF30036C0AD /* SongsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8498274B15A5DBF30036C0AD /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498274A15A5DBF30036C0AD /* SongsViewController.m */; };
 		8498275015A5DCDC0036C0AD /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498274F15A5DCDC0036C0AD /* Song.m */; };
 		8498275315A5DCF10036C0AD /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8498275215A5DCF10036C0AD /* Tag.m */; };
-		8498275915A6BED70036C0AD /* album1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498275415A6BED70036C0AD /* album1.jpg */; };
-		8498275A15A6BED70036C0AD /* album2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498275515A6BED70036C0AD /* album2.jpg */; };
-		8498275B15A6BED70036C0AD /* album3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498275615A6BED70036C0AD /* album3.jpg */; };
-		8498275C15A6BED70036C0AD /* album4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8498275715A6BED70036C0AD /* album4.jpg */; };
-		8498275D15A6BED70036C0AD /* album5.png in Resources */ = {isa = PBXBuildFile; fileRef = 8498275815A6BED70036C0AD /* album5.png */; };
 		8498275F15A6C2910036C0AD /* listen.png in Resources */ = {isa = PBXBuildFile; fileRef = 8498275E15A6C2910036C0AD /* listen.png */; };
 		84C5F3C915AD28B90063977B /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84C5F3BC15AD28B90063977B /* FBDialog.bundle */; };
 		84C5F3CA15AD28B90063977B /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C5F3C215AD28B90063977B /* libfacebook_ios_sdk.a */; };
@@ -63,6 +65,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84176EED15B1D71F0069A8E9 /* album1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album1.jpg; sourceTree = "<group>"; };
+		84176EEE15B1D71F0069A8E9 /* album2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album2.jpg; sourceTree = "<group>"; };
+		84176EEF15B1D71F0069A8E9 /* album3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album3.jpg; sourceTree = "<group>"; };
+		84176EF015B1D71F0069A8E9 /* album4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album4.jpg; sourceTree = "<group>"; };
+		84176EF115B1D71F0069A8E9 /* album5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album5.jpg; sourceTree = "<group>"; };
+		841ACECC15B9C0BC00252B3E /* HistoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDetailViewController.h; sourceTree = "<group>"; };
+		841ACECD15B9C0BC00252B3E /* HistoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDetailViewController.m; sourceTree = "<group>"; };
 		844BB49615A0C1A3000F75E9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		844BB49715A0C1A3000F75E9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		844BB49A15A0C1B2000F75E9 /* loading_fb_button(78,294).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_fb_button(78,294).png"; sourceTree = "<group>"; };
@@ -110,6 +119,8 @@
 		847B5FB815999E34005CFF0E /* FBFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriend.m; sourceTree = "<group>"; };
 		847B5FB915999E34005CFF0E /* FBFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendsViewController.h; sourceTree = "<group>"; };
 		847B5FBA15999E34005CFF0E /* FBFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendsViewController.m; sourceTree = "<group>"; };
+		84879C7E15B2AA180087B84B /* SongForYou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongForYou.h; sourceTree = "<group>"; };
+		84879C7F15B2AA180087B84B /* SongForYou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongForYou.m; sourceTree = "<group>"; };
 		8494981615AAF2DA00B2D252 /* TagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagButton.h; sourceTree = "<group>"; };
 		8494981715AAF2DA00B2D252 /* TagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagButton.m; sourceTree = "<group>"; };
 		8494981915AAF2FF00B2D252 /* TagScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagScrollView.h; sourceTree = "<group>"; };
@@ -122,11 +133,6 @@
 		8498274F15A5DCDC0036C0AD /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Song.m; sourceTree = "<group>"; };
 		8498275115A5DCF10036C0AD /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		8498275215A5DCF10036C0AD /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
-		8498275415A6BED70036C0AD /* album1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album1.jpg; sourceTree = "<group>"; };
-		8498275515A6BED70036C0AD /* album2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album2.jpg; sourceTree = "<group>"; };
-		8498275615A6BED70036C0AD /* album3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album3.jpg; sourceTree = "<group>"; };
-		8498275715A6BED70036C0AD /* album4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = album4.jpg; sourceTree = "<group>"; };
-		8498275815A6BED70036C0AD /* album5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = album5.png; sourceTree = "<group>"; };
 		8498275E15A6C2910036C0AD /* listen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listen.png; sourceTree = "<group>"; };
 		84C5F3BA15AD28B90063977B /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
 		84C5F3BB15AD28B90063977B /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
@@ -219,13 +225,15 @@
 				844F410D15A6E79100B41480 /* CommentsViewController.m */,
 				844F410F15A6E7E400B41480 /* HistoryViewController.h */,
 				844F411015A6E7E400B41480 /* HistoryViewController.m */,
+				841ACECC15B9C0BC00252B3E /* HistoryDetailViewController.h */,
+				841ACECD15B9C0BC00252B3E /* HistoryDetailViewController.m */,
 				8498274D15A5DCBA0036C0AD /* Songs */,
 				8494981515AAF2AF00B2D252 /* Tags */,
 				847B5FB615999E1E005CFF0E /* FBFriends */,
+				847B5F021598DD19005CFF0E /* AudioPlayer */,
 				847B5FB51598EF37005CFF0E /* Images */,
 				84C5F3B915AD28B90063977B /* facebook-ios-sdk */,
 				847B5F6E1598EEAE005CFF0E /* FBConnect */,
-				847B5F021598DD19005CFF0E /* AudioPlayer */,
 				847B5ED11598D69F005CFF0E /* Supporting Files */,
 			);
 			path = SongForYou;
@@ -291,11 +299,11 @@
 			isa = PBXGroup;
 			children = (
 				8498275E15A6C2910036C0AD /* listen.png */,
-				8498275415A6BED70036C0AD /* album1.jpg */,
-				8498275515A6BED70036C0AD /* album2.jpg */,
-				8498275615A6BED70036C0AD /* album3.jpg */,
-				8498275715A6BED70036C0AD /* album4.jpg */,
-				8498275815A6BED70036C0AD /* album5.png */,
+				84176EED15B1D71F0069A8E9 /* album1.jpg */,
+				84176EEE15B1D71F0069A8E9 /* album2.jpg */,
+				84176EEF15B1D71F0069A8E9 /* album3.jpg */,
+				84176EF015B1D71F0069A8E9 /* album4.jpg */,
+				84176EF115B1D71F0069A8E9 /* album5.jpg */,
 				844BB49A15A0C1B2000F75E9 /* loading_fb_button(78,294).png */,
 				847B5FB31598EF1F005CFF0E /* Placeholder.png */,
 			);
@@ -335,6 +343,8 @@
 			children = (
 				8498274E15A5DCDC0036C0AD /* Song.h */,
 				8498274F15A5DCDC0036C0AD /* Song.m */,
+				84879C7E15B2AA180087B84B /* SongForYou.h */,
+				84879C7F15B2AA180087B84B /* SongForYou.m */,
 			);
 			name = Songs;
 			sourceTree = "<group>";
@@ -436,13 +446,13 @@
 				847B5EE11598D6A0005CFF0E /* MainStoryboard_iPad.storyboard in Resources */,
 				847B5FB41598EF1F005CFF0E /* Placeholder.png in Resources */,
 				844BB49B15A0C1B2000F75E9 /* loading_fb_button(78,294).png in Resources */,
-				8498275915A6BED70036C0AD /* album1.jpg in Resources */,
-				8498275A15A6BED70036C0AD /* album2.jpg in Resources */,
-				8498275B15A6BED70036C0AD /* album3.jpg in Resources */,
-				8498275C15A6BED70036C0AD /* album4.jpg in Resources */,
-				8498275D15A6BED70036C0AD /* album5.png in Resources */,
 				8498275F15A6C2910036C0AD /* listen.png in Resources */,
 				84C5F3C915AD28B90063977B /* FBDialog.bundle in Resources */,
+				84176EF215B1D71F0069A8E9 /* album1.jpg in Resources */,
+				84176EF315B1D71F0069A8E9 /* album2.jpg in Resources */,
+				84176EF415B1D71F0069A8E9 /* album3.jpg in Resources */,
+				84176EF515B1D71F0069A8E9 /* album4.jpg in Resources */,
+				84176EF615B1D71F0069A8E9 /* album5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +508,8 @@
 				8494981815AAF2DA00B2D252 /* TagButton.m in Sources */,
 				8494981B15AAF2FF00B2D252 /* TagScrollView.m in Sources */,
 				8494981E15AAF31700B2D252 /* TagAdder.m in Sources */,
+				84879C8015B2AA180087B84B /* SongForYou.m in Sources */,
+				841ACECE15B9C0BC00252B3E /* HistoryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

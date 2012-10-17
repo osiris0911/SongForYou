@@ -194,8 +194,7 @@ static NSString* facebookAppId = @"146412965489498";
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    @"friends.getAppUsers", @"method",
                                    nil];
-    [[delegate facebook] requestWithParams:params
-                               andDelegate:self];
+    [[delegate facebook] requestWithParams:params andDelegate:self];
 }
 
 
@@ -505,9 +504,7 @@ static NSString* facebookAppId = @"146412965489498";
         [songsVController setCurrFBImage:FBImage];
         [songsVController setCurrFBId:FBId];
         [songsVController setCurrFBName:FBName];
-        
     }
-    
 }
 
 

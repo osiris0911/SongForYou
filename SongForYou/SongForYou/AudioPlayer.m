@@ -8,7 +8,8 @@
 @implementation AudioPlayer
 
 - (id)initPlayerWithURL:(NSURL *)url delegate:(id<AudioPlayerDelegate>) aDelegate {
-	self = [super init];
+    
+    self = [super init];
 
 	delegate = aDelegate;
 	
@@ -18,7 +19,7 @@
 	[fileStream open];
 
 	request = [[AudioRequest alloc] initRequestWithURL:url delegate:self];
-
+    
 	return self;
 }
 
@@ -79,6 +80,7 @@
 }
 
 - (void)audioQueuePlaybackIsStarting:(AudioQueue *)audioQueue {
+    NSLog(@"audioQueuePlaybackIsStarting");
 	[delegate audioPlayerPlaybackStarted:self];
 }
 

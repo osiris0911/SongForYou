@@ -16,22 +16,27 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-- (void)playSong;
+@property (nonatomic, retain) AudioPlayer *audioPlayer;
 
 /*
  * Loads and plays the audio URL input by the user.
  */
 - (IBAction)load;
-
+- (void)loadSong:(NSString*) songUrl;
 /*
  * Pauses the currently playing audio.
  */
 - (IBAction)pause;
+- (void)pauseSong;
 
 /*
  * Resumes playing the current audio after pause.
  */
 - (IBAction)play;
+- (void)playSong;
+
+- (void)cancelSong;
+
 
 @end
 

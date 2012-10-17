@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Song.h"
 #import "CommentsViewController.h"
+#import "AudioPlayerAppDelegate.h"
 
 @interface SongsViewController : UIViewController 
 <UITableViewDataSource, UITableViewDelegate>{
@@ -20,18 +21,28 @@
     IBOutlet UILabel*friendLabel;
     
     NSMutableArray *Songs;
+    NSMutableDictionary *SongsDictionary;
     
     UIImage *SongImage;
     NSString *SongId;
     NSString *SongName;
+    Song* SongObject;
+    
+    NSMutableDictionary *AudioPlayerInProgress;
+    
+    AudioPlayerAppDelegate *audioPlayer;
     
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *SongsTableView;
 @property (nonatomic, retain) NSMutableArray *Songs;
+@property (nonatomic, retain) NSMutableDictionary *SongsDictionary;
 @property (nonatomic, strong) UIImage *currFBImage;
 @property (nonatomic, strong) NSString *currFBId;
 @property (nonatomic, strong) NSString *currFBName;
 
+@property (nonatomic, strong) NSMutableDictionary *AudioPlayerInProgress;
+
+@property (nonatomic, strong) AudioPlayerAppDelegate *audioPlayer;
 
 @end

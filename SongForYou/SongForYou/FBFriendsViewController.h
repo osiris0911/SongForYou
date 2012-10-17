@@ -12,7 +12,6 @@
 #import "FBConnect.h"
 #import "ImageDownloader.h"
 #import "SongsViewController.h"
-//#import "SpotsQuery.h"
 
 typedef enum apiCall {
     kAPILogout,

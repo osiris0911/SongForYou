@@ -8,7 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Song : NSObject
+@interface Song : NSObject <NSCoding>{
+    
+    NSString *SongID;
+    NSString *Title;
+    NSString *Album;
+    NSString *Singer;
+    NSString *AlbumImage;
+    NSString *AlbumImageUrl;
+    NSString *SongUrl;
+    
+}
 
 @property (nonatomic, strong) NSString *SongID;
 @property (nonatomic, strong) NSString *Title;
@@ -16,6 +26,7 @@
 @property (nonatomic, strong) NSString *Singer;
 @property (nonatomic, strong) NSString *AlbumImage;
 @property (nonatomic, strong) NSString *AlbumImageUrl;
+@property (nonatomic, strong) NSString *SongUrl;
 
 
 @end

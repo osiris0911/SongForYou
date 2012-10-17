@@ -15,8 +15,11 @@
 @implementation SongsViewController
 
 @synthesize SongsTableView;
-@synthesize Songs;
+@synthesize Songs, SongsDictionary;
 @synthesize currFBImage, currFBId, currFBName;
+@synthesize AudioPlayerInProgress;
+@synthesize audioPlayer;
+
 
 + (UIImage*)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize
 {
@@ -62,12 +65,6 @@
         NSLog(@"numberOfRowsInSection = NO");
         return 0;
     }
-}
-
-- (void)songPlayClicked:(id)sender{
-    NSLog(@"songPlayClicked");
-    
-    
 }
 
 /*
@@ -117,40 +114,10 @@
     [listenButton setImage:[UIImage imageNamed:@"listen.png"] forState:UIControlStateNormal];
     [listenButton setFrame:CGRectMake(260, 12, 22, 20)];
     [listenButton addTarget:self action:@selector(songPlayClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [listenButton setTag:cell.tag];
+
     [cell.contentView addSubview:listenButton];
     
-    /*
-    UIButton *downloadButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [downloadButton setTitle:@"Download" forState:UIControlStateNormal];
-    [downloadButton setFrame:CGRectMake(100, 0, 100, 35)];
-    //[tableView cellForRowAtIndexPath:indexPath].accessoryView = downloadButton;
-    [cell.contentView addSubview:downloadButton];
-    */
-    
-    /*
-    NSString* objectID = [[Songs objectAtIndex:indexPath.row] objectForKey:@"id"];
-    
-    FBFriend *fbfriend = [[FBFriend alloc] init];
-    fbfriend.friendID = objectID;
-    fbfriend.friendImage = [self imageForObject:[[myData objectAtIndex:indexPath.row] objectForKey:@"id"]];
-    fbfriend.friendName = [[myData objectAtIndex:indexPath.row] objectForKey:@"name"];
-    fbfriend.imageURLString = [[NSString alloc] initWithFormat:@"https://graph.facebook.com/%@/picture",objectID];
-    
-    if( !fbfriend.friendImage){
-        //if (tableView.dragging == NO && tableView.decelerating == NO)
-        //{
-        [self getImageForObject:fbfriend forIndexPath:indexPath];
-        //}
-        cell.imageView.image = [UIImage imageNamed:@"Placeholder.png"];
-        
-    }
-    else {
-        // The object's image
-        cell.imageView.image = fbfriend.friendImage;
-    }
-    */
-    
-    // Configure the cell.
     return cell;
 }
 
@@ -168,14 +135,48 @@
         //cell.accessoryType = UITableViewCellAccessoryCheckmark;
         
         SongImage = cell.imageView.image;
-        SongId = (NSString*)cell.tag;
+        SongId = [NSString stringWithFormat:@"%@", cell.tag];
         SongName = cell.textLabel.text;
-        
+        SongObject = [SongsDictionary objectForKey:[NSString stringWithFormat:@"%@", cell.tag]];
+                      
         [self performSegueWithIdentifier:@"SetComments" sender:self];
         
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)songPlayClicked:(id)sender{
+    NSLog(@"songPlayClicked:%@", sender);
+    
+    [self cancelAllSongs];
+    
+    UIButton *listenButton = (UIButton*)sender;
+    NSLog(@"listenButton.tag:%@",listenButton.tag);
+    NSString *songUrl = [NSString stringWithFormat:@"https://dl.dropbox.com/u/16447993/songs/%@.mp3", listenButton.tag];
+    
+    //AudioPlayerAppDelegate *audioPlayer = [AudioPlayerInProgress objectForKey:[NSString stringWithFormat:@"%@",listenButton.tag]];
+    //if( audioPlayer == nil){
+        NSLog(@"new audioPlayer");
+        //audioPlayer  = [[AudioPlayerAppDelegate alloc] init];
+        //[AudioPlayerInProgress setObject:audioPlayer forKey:[NSString stringWithFormat:@"%@",listenButton.tag]];
+        [audioPlayer loadSong:songUrl];
+//    }
+//    else {
+//        [audioPlayer playSong];
+//        
+//    }
+}
+
+- (void)cancelAllSongs{
+    NSLog(@"cancelAllSongs:%@", AudioPlayerInProgress);
+    
+    [audioPlayer cancelSong];
+    
+    // terminate all pending download connections
+    //NSArray *allAudioPlayer = [self.AudioPlayerInProgress allValues];
+    //NSLog(@"allAudioPlayer:%@",allAudioPlayer);
+    //[allAudioPlayer makeObjectsPerformSelector:@selector(pauseSong)];
 }
 
 - (void)viewDidLoad
@@ -193,12 +194,20 @@
     friendImageView.image = currFBImage;
     friendLabel.text = currFBName;
     
+    NSLog(@"AudioPlayerInProgress init");
+    //AudioPlayerInProgress = [[NSMutableDictionary alloc] init];
+    audioPlayer = [[AudioPlayerAppDelegate alloc] init];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    [self cancelAllSongs];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{ 
@@ -216,6 +225,7 @@
         [commentsVController setCurrSongImage:SongImage];
         [commentsVController setCurrSongId:SongId];
         [commentsVController setCurrSongName:SongName];
+        [commentsVController setCurrSongObject:SongObject];
         
     }
     
@@ -226,51 +236,60 @@
     
     NSLog(@"prepareForData");
     Songs = [[NSMutableArray alloc] init];
+    SongsDictionary = [[NSMutableDictionary alloc] init];
+    
     Song *song = [[Song alloc] init];
     [song setSongID:@"1"];
-    [song setTitle:@"阿爸的虱目魚"];
-    [song setAlbum:@"思念會驚"];
-    [song setSinger:@"蕭煌奇"];
+    [song setTitle:@"王妃"];
+    [song setAlbum:@"王妃"];
+    [song setSinger:@"蕭敬騰"];
     [song setAlbumImage:@"album1.jpg"];
+    [song setSongUrl:@"https://dl.dropbox.com/u/16447993/songs/1.mp3"];
     [Songs addObject:song];
+    [SongsDictionary setObject:song forKey:[song SongID]];
     
     song = [[Song alloc] init];
     [song setSongID:@"2"];
-    [song setTitle:@"活著"];
-    [song setAlbum:@"蕭敬騰同名專輯"];
-    [song setSinger:@"蕭敬騰"];
+    [song setTitle:@"空港"];
+    [song setAlbum:@"愛靈靈"];
+    [song setSinger:@"戴愛玲"];
     [song setAlbumImage:@"album2.jpg"];
+    [song setSongUrl:@"https://dl.dropbox.com/u/16447993/songs/2.mp3"];
     [Songs addObject:song];
+    [SongsDictionary setObject:song forKey:[song SongID]];
     
     song = [[Song alloc] init];
     [song setSongID:@"3"];
-    [song setTitle:@"故事細膩"];
-    [song setAlbum:@"學不會"];
-    [song setSinger:@"林俊傑"];
+    [song setTitle:@"痴心絕對"];
+    [song setAlbum:@"痴心絕對"];
+    [song setSinger:@"李聖傑"];
     [song setAlbumImage:@"album3.jpg"];
+    [song setSongUrl:@"https://dl.dropbox.com/u/16447993/songs/3.mp3"];
     [Songs addObject:song];
+    [SongsDictionary setObject:song forKey:[song SongID]];
     
     song = [[Song alloc] init];
     [song setSongID:@"4"];
-    [song setTitle:@"完美落地"];
-    [song setAlbum:@"「翻滾吧！阿信」電影原聲帶"];
-    [song setSinger:@"陳泰翔(阿翔)"];
+    [song setTitle:@"愛"];
+    [song setAlbum:@"就 i Karen 莫文蔚精選"];
+    [song setSinger:@"莫文蔚"];
     [song setAlbumImage:@"album4.jpg"];
+    [song setSongUrl:@"https://dl.dropbox.com/u/16447993/songs/4.mp3"];
     [Songs addObject:song];
+    [SongsDictionary setObject:song forKey:[song SongID]];
     
     song = [[Song alloc] init];
     [song setSongID:@"5"];
-    [song setTitle:@"諾亞方舟"];
-    [song setAlbum:@"第二人生 Now Here 明日版"];
-    [song setSinger:@"五月天(Mayday)"];
-    [song setAlbumImage:@"album5.png"];
+    [song setTitle:@"紅豆"];
+    [song setAlbum:@"可啦思刻"];
+    [song setSinger:@"方大同"];
+    [song setAlbumImage:@"album5.jpg"];
+    [song setSongUrl:@"https://dl.dropbox.com/u/16447993/songs/5.mp3"];
     [Songs addObject:song];
-    
-    NSLog(@"Songs:%@", Songs);
+    [SongsDictionary setObject:song forKey:[song SongID]];
     
     loaded = YES;
     [SongsTableView reloadData];
-    NSLog(@"reloadData");
     
 }
 

@@ -7,6 +7,7 @@
 @implementation AudioPlayerAppDelegate
 
 @synthesize window;
+@synthesize audioPlayer;
 
 void interruptionListener (void *inClientData, UInt32 inInterruptionState);
 
@@ -77,20 +78,30 @@ void interruptionListener (void *inClientData, UInt32 inInterruptionState);
 	return YES;
 }
 
-- (void)playSong{
-    NSLog(@"playSong");
-}
-
 - (IBAction)load {
     NSLog(@"load");
-    /*
+    
 	AudioSessionSetActive(YES);
 	[audioPlayer cancel];
 	[audioPlayer release];
 	audioPlayer = [[AudioPlayer alloc] initPlayerWithURL:[NSURL URLWithString:urlTextField.text] delegate:self];
 	[urlTextField resignFirstResponder];
 	[self showLoading];
-     */
+     
+}
+- (void)loadSong:(NSString*) songUrl{
+    NSLog(@"loadSong:%@", songUrl);
+    
+    AudioSessionSetActive(YES);
+	[audioPlayer cancel];
+	[audioPlayer release];
+    NSLog(@"audioPlayer:%@",audioPlayer);
+	audioPlayer = [[AudioPlayer alloc] initPlayerWithURL:[NSURL URLWithString:songUrl] delegate:self];
+	NSLog(@"audioPlayer:%@",audioPlayer);
+    [urlTextField resignFirstResponder];
+	[self showLoading];
+    
+    
 }
 
 - (IBAction)pause {
@@ -98,9 +109,32 @@ void interruptionListener (void *inClientData, UInt32 inInterruptionState);
 	[self showPaused];
 }
 
+- (void)pauseSong{
+    NSLog(@"pauseSong");
+    
+    audioPlayer.paused = YES;
+	[self showPaused];
+}
+
 - (IBAction)play {
 	audioPlayer.paused = NO;
 	[self showPlaying];
+}
+
+- (void)playSong{
+    NSLog(@"playSong");
+    
+    audioPlayer.paused = NO;
+	[self showPlaying];
+}
+
+- (void)cancelSong{
+    NSLog(@"cancelSong");
+    
+    //[self pauseSong];
+    AudioSessionSetActive(YES);
+	[audioPlayer cancel];
+	//[audioPlayer release];
 }
 
 - (void)audioPlayerDownloadFailed:(AudioPlayer *)audioPlayer {
@@ -111,6 +145,7 @@ void interruptionListener (void *inClientData, UInt32 inInterruptionState);
 }
 
 - (void)audioPlayerPlaybackStarted:(AudioPlayer *)audioPlayer {
+    NSLog(@"audioPlayerPlaybackStarted");
 	[self showPlaying];
 }
 
